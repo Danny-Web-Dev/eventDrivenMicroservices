@@ -48,8 +48,9 @@ const updateUser = async (req, res) => {
 			return res.status(404).json({ success: false, message: 'User not found.' });
 		}
 
-		if (email === user.email) {
-			return res.status(404).json({ success: false, message: 'Email is already registered under a different user.' });
+		// validate changes has made
+		if (email === user.email && name === user.name) {
+			return res.status(404).json({ success: false, message: 'No changes made to user.' });
 		}
 
 		// Update user details
