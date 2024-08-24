@@ -32,8 +32,7 @@ The system follows an event-driven architecture where services communicate async
    - **APIs**:
      - `POST /api/orders` - Place a new order.
      - `GET /api/orders/:id` - Retrieve order details.
-     - `PUT /api/orders/:id` - Update an order.
-     - `DELETE /api/orders/:id` - Delete an order.
+     - `POST /api/orders/:id` - Cancel an order.
 
 3. **Event Service**
    - **Responsibilities**: Facilitates event-driven communication between the microservices using NATS or any other message broker.
@@ -43,6 +42,7 @@ The system follows an event-driven architecture where services communicate async
      - `User Get`
      - `User Update`
      - `Order Placed`
+     - `Order Get`
      - `Order Cancelled`
 
 ### Event Flow

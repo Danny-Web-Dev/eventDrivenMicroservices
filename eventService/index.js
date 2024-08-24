@@ -22,13 +22,18 @@ nats.subscribe('user:update', (msg) => {
 // Listen to 'Order Placed' event
 nats.subscribe('order:placed', (msg) => {
 	const data = JSON.parse(msg);
-	console.log(`Order Placed Event Received: Order ${data.id} by User ${data.userId}`);
+	console.log(`Order Placed Event Received: OrderId: ${data.id} by UserId: ${data.userId}`);
+});
+
+// Listen to 'Order Get' event
+nats.subscribe('order:get', (msg) => {
+	console.log(`Order Get Event Received: Order ${msg}`);
 });
 
 // Listen to 'Order Cancelled' event
 nats.subscribe('order:cancelled', (msg) => {
 	const data = JSON.parse(msg);
-	console.log(`Order Cancelled Event Received: Order ${data.id}`);
+	console.log(`Order Cancelled Event Received: OrderId: ${data.id}`);
 });
 
 console.log('Event Service listening for events...');
