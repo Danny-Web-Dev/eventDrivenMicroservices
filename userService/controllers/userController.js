@@ -43,7 +43,7 @@ const updateUser = async (req, res) => {
 
 	try {
 		// Find the user by ID
-		const user = await id;
+		const user = await getById(id);
 		if (!user) {
 			return res.status(404).json({ success: false, message: 'User not found.' });
 		}
