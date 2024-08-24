@@ -15,7 +15,6 @@ exports.createOrder = async (req, res) => {
 };
 
 exports.cancelOrder = async (req, res) => {
-	console.log('hello');
 	try {
 		const order = await Order.findByPk(req.params.id);
 		if (order) {

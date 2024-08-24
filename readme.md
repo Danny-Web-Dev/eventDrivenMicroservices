@@ -56,7 +56,6 @@ The system follows an event-driven architecture where services communicate async
 
 - **Node.js**: Ensure Node.js is installed on your machine.
 - **MySQL**: Install MySQL and set up the required databases.
-- **Docker**: For running the NATS server or use a local installation.
 
 ### Extra
 
