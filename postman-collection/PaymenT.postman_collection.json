@@ -10,13 +10,13 @@
 			"name": "UsersService",
 			"item": [
 				{
-					"name": "Create User",
+					"name": "Create",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"Daniel Mizrachi\",\n  \"email\": \"Daniel@test.com\"\n}",
+							"raw": "{\n  \"name\": \"Daniel Mizrachi\",\n  \"email\": \"Daniel@tesssssst.com\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -25,8 +25,60 @@
 						},
 						"url": {
 							"raw": "{{usersHost}}/api/users",
-							"host": ["{{usersHost}}"],
-							"path": ["api", "users"]
+							"host": [
+								"{{usersHost}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{usersHost}}/api/get/1",
+							"host": [
+								"{{usersHost}}"
+							],
+							"path": [
+								"api",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Daniel Mizrachiiiii\",\n  \"email\": \"Daniel@tessssssssst.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{usersHost}}/api/users/8",
+							"host": [
+								"{{usersHost}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"8"
+							]
 						}
 					},
 					"response": []
@@ -52,8 +104,13 @@
 						},
 						"url": {
 							"raw": "{{ordersHost}}/api/orders",
-							"host": ["{{ordersHost}}"],
-							"path": ["api", "orders"]
+							"host": [
+								"{{ordersHost}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
 						}
 					},
 					"response": []
@@ -65,8 +122,34 @@
 						"header": [],
 						"url": {
 							"raw": "{{ordersHost}}/api/orders/1/cancel",
-							"host": ["{{ordersHost}}"],
-							"path": ["api", "orders", "1", "cancel"]
+							"host": [
+								"{{ordersHost}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"1",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ordersHost}}/api/orders/1",
+							"host": [
+								"{{ordersHost}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"1"
+							]
 						}
 					},
 					"response": []
@@ -80,7 +163,9 @@
 			"script": {
 				"type": "text/javascript",
 				"packages": {},
-				"exec": [""]
+				"exec": [
+					""
+				]
 			}
 		},
 		{
@@ -88,7 +173,9 @@
 			"script": {
 				"type": "text/javascript",
 				"packages": {},
-				"exec": [""]
+				"exec": [
+					""
+				]
 			}
 		}
 	],
