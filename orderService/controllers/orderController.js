@@ -11,12 +11,14 @@ const createOrder = async (req, res) => {
 
 		res.status(201).json(order);
 	} catch (error) {
-		res.status(400).json({ error: error.message });
+		console.error(error);
+		res.status(500).json({ success: false, message: 'Server error.' });
 	}
 };
 
 const getOrder = async (req, res) => {
 	try {
+		// fetch from DB
 		const order = await Order.findByPk(req.params.id);
 
 		if (!order) {
@@ -29,7 +31,8 @@ const getOrder = async (req, res) => {
 		// return order details
 		res.status(201).json(order);
 	} catch (error) {
-		res.status(400).json({ error: error.message });
+		console.error(error);
+		res.status(500).json({ success: false, message: 'Server error.' });
 	}
 };
 
