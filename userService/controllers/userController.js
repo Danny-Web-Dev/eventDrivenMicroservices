@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const { User, getById } = require('../models/user');
 const nats = require('nats').connect({ url: 'nats://localhost:4222' });
 
 const createUser = async (req, res) => {
@@ -19,7 +19,7 @@ const createUser = async (req, res) => {
 const getUser = async (req, res) => {
 	try {
 		// fetch from DB
-		const user = await User.findByPk(req.params.id);
+		const user = await getById(req.params.id);
 
 		// if user not found, return failed to find
 		if (!user) {
@@ -43,7 +43,7 @@ const updateUser = async (req, res) => {
 
 	try {
 		// Find the user by ID
-		const user = await User.findByPk(id);
+		const user = await id;
 		if (!user) {
 			return res.status(404).json({ success: false, message: 'User not found.' });
 		}
