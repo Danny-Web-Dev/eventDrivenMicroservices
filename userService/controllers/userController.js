@@ -12,7 +12,8 @@ const createUser = async (req, res) => {
 		// return user details
 		res.status(201).json(user);
 	} catch (error) {
-		res.status(400).json({ error: error.message });
+		console.error(error);
+		res.status(500).json({ success: false, message: 'Server error.' });
 	}
 };
 
@@ -32,7 +33,8 @@ const getUser = async (req, res) => {
 		// return user details
 		res.status(201).json(user);
 	} catch (error) {
-		res.status(400).json({ error: error.message });
+		console.error(error);
+		res.status(500).json({ success: false, message: 'Server error.' });
 	}
 };
 
