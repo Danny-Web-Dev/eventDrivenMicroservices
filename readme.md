@@ -19,7 +19,7 @@ The system follows an event-driven architecture where services communicate async
 1. **User Service**
 
    - **Responsibilities**: Manages user information, handles user authentication, and triggers events when users are created or updated.
-   - **Technologies**: Node.js, Express, MySQL, Sequelize.
+   - **Technologies**: Node.js, Express, MySQL, Sequelize(ORM).
    - **APIs**:
      - `POST /api/users` - Create a new user.
      - `GET /api/users/:id` - Retrieve user details.
@@ -41,6 +41,8 @@ The system follows an event-driven architecture where services communicate async
    - **Technologies**: NATS, Node.js.
    - **Event Types**:
      - `User Created`
+     - `User Get`
+     - `User Update`
      - `Order Placed`
      - `Order Cancelled`
 

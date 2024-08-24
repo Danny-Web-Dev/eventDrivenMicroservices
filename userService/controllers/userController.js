@@ -1,7 +1,6 @@
 const User = require('../models/user');
 const nats = require('nats').connect({ url: 'nats://localhost:4222' });
 
-// create user api
 const createUser = async (req, res) => {
 	try {
 		// insert to DB
@@ -17,7 +16,6 @@ const createUser = async (req, res) => {
 	}
 };
 
-// get user api
 const getUser = async (req, res) => {
 	try {
 		// fetch from DB
@@ -38,7 +36,6 @@ const getUser = async (req, res) => {
 	}
 };
 
-// update user api
 const updateUser = async (req, res) => {
 	// extract data
 	const { id } = req.params;
@@ -65,6 +62,9 @@ const updateUser = async (req, res) => {
 
 		// Save updated user
 		await user.save();
+
+		// Publish 'User update' event
+		nats.publish('user:update', JSON.stringify({ id: user.id, name: user.name, email: user.email }));
 
 		res.json({ success: true, message: 'User updated successfully.', user });
 	} catch (error) {

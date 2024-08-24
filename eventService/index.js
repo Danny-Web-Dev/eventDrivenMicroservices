@@ -11,8 +11,12 @@ nats.subscribe('user:created', (msg) => {
 
 // Listen to 'User get' event
 nats.subscribe('user:get', (msg) => {
-	const data = JSON.parse(msg);
-	console.log(`User Get Event Received: ${data.name} (${data.email})`);
+	console.log(`User Get Event Received: ${msg}`);
+});
+
+// Listen to 'User update' event
+nats.subscribe('user:update', (msg) => {
+	console.log(`User Update Event Received: ${msg}`);
 });
 
 // Listen to 'Order Placed' event
