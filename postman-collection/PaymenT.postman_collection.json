@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "ae0f5bb0-13d4-416e-b144-f92ec3770f73",
+		"name": "PaymenT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24141102"
+	},
+	"item": [
+		{
+			"name": "UsersService",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Daniel Mizrachi\",\n  \"email\": \"Daniel@test.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{usersHost}}/api/users",
+							"host": ["{{usersHost}}"],
+							"path": ["api", "users"]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrdersService",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": 1,\n  \"productId\": 1,\n  \"quantity\": 30,\n  \"totalPrice\": 59.97,\n  \"orderDate\": \"2024-08-24T14:00:00Z\",\n  \"shippingAddress\": {\n    \"street\": \"Dizingoff\",\n    \"city\": \"Tal Aviv\",\n    \"state\": \"Israel\",\n    \"zipCode\": \"111111\"\n  },\n  \"paymentMethod\": \"CreditCard\",\n  \"status\": \"completed\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ordersHost}}/api/orders",
+							"host": ["{{ordersHost}}"],
+							"path": ["api", "orders"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{ordersHost}}/api/orders/1/cancel",
+							"host": ["{{ordersHost}}"],
+							"path": ["api", "orders", "1", "cancel"]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [""]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [""]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "usersHost",
+			"value": "http://localhost:3001",
+			"type": "string"
+		},
+		{
+			"key": "ordersHost",
+			"value": "http://localhost:3002",
+			"type": "string"
+		}
+	]
+}

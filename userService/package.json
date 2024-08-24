@@ -1,0 +1,15 @@
+{
+	"name": "user-service",
+	"version": "1.0.0",
+	"description": "User Service for event-driven microservices system",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"dependencies": {
+		"express": "^4.17.1",
+		"mysql2": "^2.3.0",
+		"sequelize": "^6.6.5",
+		"nats": "^1.4.12"
+	}
+}

@@ -1,0 +1,9 @@
+# Ignore node_modules folders
+
+eventService/node_modules/
+orderService/node_modules/
+userService/node_modules/
+
+# Ignore vs code configs
+
+.vscode
