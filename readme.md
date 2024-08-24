@@ -24,7 +24,6 @@ The system follows an event-driven architecture where services communicate async
      - `POST /api/users` - Create a new user.
      - `GET /api/users/:id` - Retrieve user details.
      - `PUT /api/users/:id` - Update user details.
-     - `DELETE /api/users/:id` - Delete a user.
 
 2. **Order Service**
 
