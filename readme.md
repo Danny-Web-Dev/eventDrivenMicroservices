@@ -70,3 +70,5 @@ The system follows an event-driven architecture where services communicate async
    git clone https://github.com/your-repo/event-driven-microservices.git
    cd event-driven-microservices
    ```
+
+- Do not forget to run npm install on each service.
