@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
 
-// ***** make sure you insert you local mysql configs *****
+// ***** make sure you insert your local mysql configs *****
 
 const sequelize = new Sequelize('user_service_db', 'root', '12345678', {
 	host: 'localhost',
