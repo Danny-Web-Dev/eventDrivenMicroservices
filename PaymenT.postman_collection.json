@@ -10,7 +10,7 @@
 			"name": "UsersService",
 			"item": [
 				{
-					"name": "Create",
+					"name": "Register",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -24,13 +24,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{usersHost}}/api/users",
+							"raw": "{{usersHost}}/api/register",
 							"host": [
 								"{{usersHost}}"
 							],
 							"path": [
 								"api",
-								"users"
+								"register"
 							]
 						}
 					},
@@ -185,15 +185,15 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{ordersHost}}/api/orders/1/cancel",
+							"raw": "{{ordersHost}}/api/orders/cancel/1",
 							"host": [
 								"{{ordersHost}}"
 							],
 							"path": [
 								"api",
 								"orders",
-								"1",
-								"cancel"
+								"cancel",
+								"1"
 							]
 						}
 					},

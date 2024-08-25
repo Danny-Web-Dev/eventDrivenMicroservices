@@ -4,7 +4,7 @@ const { createOrder, cancelOrder, getOrder } = require('../controllers/orderCont
 const router = express.Router();
 
 router.post('/orders', createOrder);
-router.post('/orders/:id/cancel', cancelOrder);
+router.post('/orders/cancel/:id', cancelOrder);
 router.get('/orders/:id', getOrder);
 
 module.exports = router;
