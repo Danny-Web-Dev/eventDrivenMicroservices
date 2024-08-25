@@ -16,7 +16,7 @@ const Order = sequelize.define('Order', {
 		allowNull: false,
 	},
 	totalPrice: {
-		type: DataTypes.DECIMAL(10, 2), // Adjusted to handle decimal prices
+		type: DataTypes.DECIMAL(10, 2),
 		allowNull: false,
 	},
 	orderDate: {
@@ -24,7 +24,7 @@ const Order = sequelize.define('Order', {
 		allowNull: false,
 	},
 	shippingAddress: {
-		type: DataTypes.JSON, // Use JSON to store an object
+		type: DataTypes.JSON,
 		allowNull: false,
 	},
 	paymentMethod: {
@@ -33,7 +33,7 @@ const Order = sequelize.define('Order', {
 	},
 	status: {
 		type: DataTypes.STRING,
-		defaultValue: 'created', // Keep the default as 'created' unless overridden
+		defaultValue: 'created',
 	},
 });
 

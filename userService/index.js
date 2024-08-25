@@ -7,6 +7,7 @@ app.use(express.json());
 
 app.use('/api', userRoutes);
 
+// init sequalize and run app.
 sequelize
 	.sync()
 	.then(() => {
