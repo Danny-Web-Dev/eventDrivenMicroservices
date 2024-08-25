@@ -10,11 +10,12 @@ The microservices included in this project are:
 2. **Order Service**: Handles order creation, updates, and cancellations.
 3. **Event Service**: Manages event publication and subscription, facilitating communication between services.
 
-## Library tools
+Library tools:
 
 1. **Sequlize**: ORM library to handle DB interactions.
 2. **Nats**: Very light weight open source messaging system.
 3. **Express**: Minimal nodejs web server framwork.
+4. **jsonwebtoken**: JWT authentication.
 
 ## Architecture
 
@@ -30,6 +31,8 @@ The system follows an event-driven architecture where services communicate async
      - `POST /api/users` - Create a new user.
      - `GET /api/users/:id` - Retrieve user details.
      - `PUT /api/users/:id` - Update user details.
+
+   \*\* GET and UPDATE are protected with the user correct JWT auth.
 
 2. **Order Service**
 
@@ -64,9 +67,11 @@ The system follows an event-driven architecture where services communicate async
 - **Node.js**: Ensure Node.js is installed on your machine.
 - **MySQL**: Install MySQL and set up the required databases.
 
-### Extra
+### PostMan collection
 
-- **PostMan collection**: For your convinence I have attached a postman collection json. import it and play around.
+For your convinence I have attached a postman collection json. import it and play around.
+
+\*\* Please note, JWT is automated in requests. No need to copy and add to the requests that requires auth.
 
 ### Installation
 
