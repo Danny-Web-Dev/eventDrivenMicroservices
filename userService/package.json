@@ -7,9 +7,12 @@
 		"start": "node index.js"
 	},
 	"dependencies": {
+		"bcrypt": "^5.1.1",
+		"dotenv": "^16.4.5",
 		"express": "^4.17.1",
+		"jsonwebtoken": "^9.0.2",
 		"mysql2": "^2.3.0",
-		"sequelize": "^6.6.5",
-		"nats": "^1.4.12"
+		"nats": "^1.4.12",
+		"sequelize": "^6.6.5"
 	}
 }

@@ -6,9 +6,15 @@ This project is an event-driven microservices system designed to handle a high v
 
 The microservices included in this project are:
 
-1. **User Service**: Manages user information and authentication.
+1. **User Service**: Manages user creation and authentication.
 2. **Order Service**: Handles order creation, updates, and cancellations.
 3. **Event Service**: Manages event publication and subscription, facilitating communication between services.
+
+## Library tools
+
+1. **Sequlize**: ORM library to handle DB interactions.
+2. **Nats**: Very light weight open source messaging system.
+3. **Express**: Minimal nodejs web server framwork.
 
 ## Architecture
 
@@ -19,7 +25,7 @@ The system follows an event-driven architecture where services communicate async
 1. **User Service**
 
    - **Responsibilities**: Manages user information, handles user authentication, and triggers events when users are created or updated.
-   - **Technologies**: Node.js, Express, MySQL, Sequelize(ORM).
+   - **Technologies**: Node.js, Express, MySQL, Sequelize.
    - **APIs**:
      - `POST /api/users` - Create a new user.
      - `GET /api/users/:id` - Retrieve user details.
@@ -35,7 +41,7 @@ The system follows an event-driven architecture where services communicate async
      - `POST /api/orders/:id` - Cancel an order.
 
 3. **Event Service**
-   - **Responsibilities**: Facilitates event-driven communication between the microservices using NATS or any other message broker.
+   - **Responsibilities**: Facilitates event-driven communication between the microservices using NATS message broker.
    - **Technologies**: NATS, Node.js.
    - **Event Types**:
      - `User Created`
