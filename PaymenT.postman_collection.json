@@ -153,7 +153,7 @@
 			"name": "OrdersService",
 			"item": [
 				{
-					"name": "Save",
+					"name": "Create",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -167,13 +167,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{ordersHost}}/api/orders",
+							"raw": "{{ordersHost}}/api/create",
 							"host": [
 								"{{ordersHost}}"
 							],
 							"path": [
 								"api",
-								"orders"
+								"create"
 							]
 						}
 					},
