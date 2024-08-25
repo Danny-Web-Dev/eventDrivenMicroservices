@@ -64,8 +64,14 @@ The system follows an event-driven architecture where services communicate async
 
 ### Prerequisites
 
-- **Node.js**: Ensure Node.js is installed on your machine.
-- **MySQL**: Install MySQL and set up the required databases.
+- **Node.js**: Ensure Node.js is installed on your machine. \*\* Do not forget to run npm install on each service.
+
+- **MySQL**: Install MySQL and set up the required databases:
+
+```mysql
+CREATE DATABASE users;
+CREATE DATABASE orders;
+```
 
 ### PostMan collection
 
@@ -81,5 +87,3 @@ For your convinence I have attached a postman collection json. import it and pla
    git clone https://github.com/Danny-Web-Dev/eventDrivenMicroservices.git
    cd event-driven-microservices
    ```
-
-- Do not forget to run npm install on each service.
