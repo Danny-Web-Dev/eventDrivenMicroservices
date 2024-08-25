@@ -77,6 +77,10 @@ const updateUser = async (req, res) => {
 		res.json({ success: true });
 	} catch (error) {
 		console.error(error);
+		if (error.name === 'SequelizeUniqueConstraintError') {
+			// Handle unique constraint error
+			return res.status(409).json({ success: false, error: 'A user with this email already exists.' });
+		}
 		res.status(500).json({ success: false, message: 'Server error.' });
 	}
 };
