@@ -12,6 +12,7 @@ const authenticateToken = (req, res, next) => {
 	const { id } = req.params;
 	const decodedJwt = jwt.decode(token);
 
+	// compare the user id requested and id that is saved in token
 	if (parseInt(id) !== parseInt(decodedJwt.id)) {
 		return res.status(403).json({ error: 'Forbidden: You do not have access to this user' });
 	}
