@@ -74,7 +74,7 @@ const updateUser = async (req, res) => {
 		// Publish 'User update' event
 		nats.publish('user:update', JSON.stringify({ id: user.id, name: user.name, email: user.email }));
 
-		res.json({ success: true, message: 'User updated successfully.', user });
+		res.json({ success: true });
 	} catch (error) {
 		console.error(error);
 		res.status(500).json({ success: false, message: 'Server error.' });

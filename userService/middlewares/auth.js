@@ -1,14 +1,15 @@
 const jwt = require('jsonwebtoken');
-const config = require('../config/config');
+const { JWT_SECRET } = require('../config/config');
 
 const authenticateToken = (req, res, next) => {
-	const token = req.headers['authorization'];
+	const authHeader = req.headers['authorization'];
+	const token = authHeader && authHeader.split(' ')[1]; // Extract token
 
 	if (!token) {
 		return res.status(403).json({ error: 'No token provided' });
 	}
 
-	jwt.verify(token, config.JWT_SECRET, (err, user) => {
+	jwt.verify(token, JWT_SECRET, (err, user) => {
 		if (err) {
 			return res.status(401).json({ error: 'Invalid token' });
 		}
