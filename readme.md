@@ -25,10 +25,10 @@ The system follows an event-driven architecture where services communicate async
 
 1. **User Service**
 
-   - **Responsibilities**: Manages user information, handles user authentication, and triggers events when users are created or updated.
-   - **Technologies**: Node.js, Express, MySQL, Sequelize.
+   - **Responsibilities**: Manages user information, handles user authentication. Emits events when users are created, updated or fetched.
+   - **Technologies**: Node.js, Express, MySQL, Sequelize jsonwebtoken.
    - **APIs**:
-     - `POST /api/users` - Create a new user.
+     - `POST /api/register` - Create a new user.
      - `GET /api/users/:id` - Retrieve user details.
      - `PUT /api/users/:id` - Update user details.
 
@@ -36,7 +36,7 @@ The system follows an event-driven architecture where services communicate async
 
 2. **Order Service**
 
-   - **Responsibilities**: Manages orders including creation, updates, and cancellations. Emits events like "Order Placed" and "Order Cancelled".
+   - **Responsibilities**: Manages orders including creation, updates, and cancellations. Emits events when order is placed cancelled or fetched.
    - **Technologies**: Node.js, Express, MySQL, Sequelize.
    - **APIs**:
      - `POST /api/orders` - Place a new order.
