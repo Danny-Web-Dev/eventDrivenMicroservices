@@ -50,6 +50,7 @@ The system follows an event-driven architecture where services communicate async
      - `User Created`
      - `User Get`
      - `User Update`
+     - `User Login`
      - `Order Placed`
      - `Order Get`
      - `Order Cancelled`
