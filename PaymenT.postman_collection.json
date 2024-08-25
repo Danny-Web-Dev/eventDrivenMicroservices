@@ -52,14 +52,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{usersHost}}/api/get/14",
+							"raw": "{{usersHost}}/api/get/1",
 							"host": [
 								"{{usersHost}}"
 							],
 							"path": [
 								"api",
 								"get",
-								"14"
+								"1"
 							]
 						}
 					},
@@ -90,14 +90,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{usersHost}}/api/users/14",
+							"raw": "{{usersHost}}/api/users/1",
 							"host": [
 								"{{usersHost}}"
 							],
 							"path": [
 								"api",
 								"users",
-								"14"
+								"1"
 							]
 						}
 					},
@@ -127,7 +127,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"email\": \"Daniel@tessssst.com\",\n  \"password\": \"1234\"\n}",
+							"raw": "{\n  \"email\": \"Daniel@test.com\",\n  \"password\": \"1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
