@@ -104,6 +104,8 @@ const loginUser = async (req, res) => {
 			{ expiresIn: '1h' }, // Token expiry (1 hour in this example)
 		);
 
+		nats.publish('user:login', JSON.stringify({ id: user.id, name: user.name, email: user.email }));
+
 		// Respond with the token and user information
 		res.json({
 			success: 'true',

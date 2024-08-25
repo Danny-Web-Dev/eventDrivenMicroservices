@@ -26,6 +26,11 @@ subscribeToEvent('user:created', (msg) => {
 	logEvent('User Created Event Received', `User Details: ${msg}`);
 });
 
+// Listen to 'User Login' event
+subscribeToEvent('user:login', (msg) => {
+	logEvent('User Login Event Received', `User Details: ${msg}`);
+});
+
 // Listen to 'User Get' event
 subscribeToEvent('user:get', (msg) => {
 	logEvent('User Get Event Received', `User Details: ${msg}`);
