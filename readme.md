@@ -67,11 +67,10 @@ The system follows an event-driven architecture where services communicate async
 
 - **Node.js**: Ensure Node.js is installed on your machine. \*\* Do not forget to run npm install on each service.
 
-- **MySQL**: Install MySQL and set up the required databases:
+- **MySQL**: Install MySQL and set up the required database:
 
 ```mysql
-CREATE DATABASE users;
-CREATE DATABASE orders;
+CREATE DATABASE microservices;
 ```
 
 ### PostMan collection
