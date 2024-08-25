@@ -1,5 +1,4 @@
 const { Sequelize } = require('sequelize');
-const { DB_CONFIG } = require('./config');
 
 const dbDetails = JSON.parse(process.env.DB_CONFIG);
 
