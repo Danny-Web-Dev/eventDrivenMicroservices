@@ -78,7 +78,7 @@ For your convinence I have attached a postman collection json. import it and pla
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-repo/event-driven-microservices.git
+   git clone https://github.com/Danny-Web-Dev/eventDrivenMicroservices.git
    cd event-driven-microservices
    ```
 
