@@ -4,7 +4,7 @@ const authenticateToken = require('../middlewares/auth');
 
 const router = express.Router();
 
-router.post('/users', createUser);
+router.post('/register', createUser);
 router.get('/get/:id', authenticateToken, getUser);
 router.put('/users/:id', authenticateToken, updateUser);
 router.post('/login', loginUser);

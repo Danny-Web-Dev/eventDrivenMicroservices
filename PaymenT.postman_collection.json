@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"Daniel Mizrachi\",\n  \"email\": \"Daniel@tesssssst.com\"\n}",
+							"raw": "{\n  \"name\": \"Daniel Mizrachi\",\n  \"email\": \"Daniel@test.com\",\n  \"password\": \"1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -39,17 +39,27 @@
 				{
 					"name": "Get",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{usersHost}}/api/get/1",
+							"raw": "{{usersHost}}/api/get/14",
 							"host": [
 								"{{usersHost}}"
 							],
 							"path": [
 								"api",
 								"get",
-								"1"
+								"14"
 							]
 						}
 					},
@@ -58,11 +68,21 @@
 				{
 					"name": "Update",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"Daniel Mizrachiiiii\",\n  \"email\": \"Daniel@tessssssssst.com\"\n}",
+							"raw": "{\n  \"name\": \"Daniel Mizrsssachi\",\n  \"email\": \"Daniel@tessssst.com\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -70,14 +90,58 @@
 							}
 						},
 						"url": {
-							"raw": "{{usersHost}}/api/users/8",
+							"raw": "{{usersHost}}/api/users/14",
 							"host": [
 								"{{usersHost}}"
 							],
 							"path": [
 								"api",
 								"users",
-								"8"
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Parse the JSON response",
+									"const responseJson = pm.response.json();",
+									"",
+									"if (responseJson && responseJson.token) {",
+									"  pm.collectionVariables.set('Token', responseJson.token);",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"Daniel@tessssst.com\",\n  \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{usersHost}}/api/login",
+							"host": [
+								"{{usersHost}}"
+							],
+							"path": [
+								"api",
+								"login"
 							]
 						}
 					},
@@ -95,7 +159,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"userId\": 1,\n  \"productId\": 1,\n  \"quantity\": 30,\n  \"totalPrice\": 59.97,\n  \"orderDate\": \"2024-08-24T14:00:00Z\",\n  \"shippingAddress\": {\n    \"street\": \"Dizingoff\",\n    \"city\": \"Tal Aviv\",\n    \"state\": \"Israel\",\n    \"zipCode\": \"111111\"\n  },\n  \"paymentMethod\": \"CreditCard\",\n  \"status\": \"completed\"\n}",
+							"raw": "{\n  \"userId\": 1,\n  \"productId\": 111,\n  \"quantity\": 30,\n  \"totalPrice\": 59.97,\n  \"orderDate\": \"2024-08-24T14:00:00Z\",\n  \"shippingAddress\": {\n    \"street\": \"Dizingoff\",\n    \"city\": \"Tal Aviv\",\n    \"state\": \"Israel\",\n    \"zipCode\": \"111111\"\n  },\n  \"paymentMethod\": \"CreditCard\",\n  \"status\": \"completed\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -189,6 +253,10 @@
 			"key": "ordersHost",
 			"value": "http://localhost:3002",
 			"type": "string"
+		},
+		{
+			"key": "Token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiRGFuaWVsQHRlc3QuY29tIiwiaWF0IjoxNzI0NTY5NzUyLCJleHAiOjE3MjQ1NzMzNTJ9.nLsPYFS7Qja4BL0H194jk2VSeMGi4Jl1KR0M3I3twoI token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiRGFuaWVsQHRlc3QuY29tIiwiaWF0IjoxNzI0NTY5NzUyLCJleHAiOjE3MjQ1NzMzNTJ9.nLsPYFS7Qja4BL0H194jk2VSeMGi4Jl1KR0M3I3twoI"
 		}
 	]
 }
