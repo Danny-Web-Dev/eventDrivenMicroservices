@@ -86,5 +86,5 @@ For your convinence I have attached a postman collection json. import it and pla
 
    ```bash
    git clone https://github.com/Danny-Web-Dev/eventDrivenMicroservices.git
-   cd event-driven-microservices
+   cd eventDrivenMicroservices
    ```
