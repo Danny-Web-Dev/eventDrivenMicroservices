@@ -52,7 +52,7 @@ const cancelOrder = async (req, res) => {
 		// Publish 'Order Cancelled' event
 		nats.publish('order:cancelled', JSON.stringify({ id: order.id }));
 
-		res.status(200).json(order);
+		res.status(200).json({ success: true });
 	} catch (error) {
 		console.error(error);
 		res.status(500).json({ success: false, message: 'Server error.' });
