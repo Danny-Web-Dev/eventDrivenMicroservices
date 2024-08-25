@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
 const dbDetails = JSON.parse(process.env.DB_CONFIG);
