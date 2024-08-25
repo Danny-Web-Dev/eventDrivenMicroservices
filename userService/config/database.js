@@ -6,7 +6,7 @@ const dbDetails = JSON.parse(process.env.DB_CONFIG);
 // ***** make sure you insert your local mysql configs *****
 
 // Sequelize ORM configuration
-const sequelize = new Sequelize('users', dbDetails.user, dbDetails.password, {
+const sequelize = new Sequelize(dbDetails.database, dbDetails.user, dbDetails.password, {
 	host: dbDetails.host,
 	dialect: 'mysql',
 	timezone: '+03:00',
