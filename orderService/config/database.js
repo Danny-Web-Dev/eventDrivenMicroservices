@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
 
-// ***** make sure you insert you local mysql configs *****
+// ***** make sure you insert your local mysql configs *****
 
 // Sequelize ORM configuration
 const sequelize = new Sequelize('orders', 'root', '12345678', {
