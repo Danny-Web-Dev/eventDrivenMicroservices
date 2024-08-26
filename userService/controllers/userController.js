@@ -1,8 +1,8 @@
+require('dotenv').config();
 const User = require('../models/user');
 const nats = require('nats').connect({ url: 'nats://localhost:4222' });
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { JWT_SECRET } = require('../config/config');
 
 const createUser = async (req, res) => {
 	try {
@@ -104,7 +104,7 @@ const loginUser = async (req, res) => {
 		// Generate a JWT token
 		const token = jwt.sign(
 			{ id: user.id, email: user.email }, // Payload
-			JWT_SECRET, // Secret key
+			process.env.JWT_SECRET, // Secret key
 			{ expiresIn: '1h' }, // Token expiry
 		);
 
