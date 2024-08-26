@@ -105,7 +105,7 @@ const loginUser = async (req, res) => {
 		const token = jwt.sign(
 			{ id: user.id, email: user.email }, // Payload
 			JWT_SECRET, // Secret key
-			{ expiresIn: '1h' }, // Token expiry (1 hour in this example)
+			{ expiresIn: '1h' }, // Token expiry
 		);
 
 		nats.publish('user:login', JSON.stringify({ id: user.id, name: user.name, email: user.email }));

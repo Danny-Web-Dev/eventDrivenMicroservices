@@ -1,7 +1,7 @@
-require('dotenv').config();
 const { Sequelize } = require('sequelize');
+const { DB_COFIG } = require('../config/config');
 
-const dbDetails = JSON.parse(process.env.DB_CONFIG);
+const dbDetails = JSON.parse(DB_COFIG);
 
 // ***** make sure you insert your local mysql configs *****
 

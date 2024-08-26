@@ -87,3 +87,10 @@ For your convinence I have attached a postman collection json. import it and pla
    git clone https://github.com/Danny-Web-Dev/eventDrivenMicroservices.git
    cd eventDrivenMicroservices
    ```
+
+2. **install & run nats server**
+
+   ```bash
+      brew install nats-server
+      nats-server -p 4222
+   ```
