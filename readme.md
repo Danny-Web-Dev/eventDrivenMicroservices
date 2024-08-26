@@ -69,9 +69,16 @@ The system follows an event-driven architecture where services communicate async
 
 - **MySQL**: Install MySQL and set up the required database:
 
-```mysql
-CREATE DATABASE microservices;
-```
+  ```mysql
+  CREATE DATABASE microservices;
+  ```
+
+- **install & run nats server**
+
+  ```bash
+     brew install nats-server
+     nats-server -p 4222
+  ```
 
 ### PostMan collection
 
@@ -86,11 +93,4 @@ For your convinence I have attached a postman collection json. import it and pla
    ```bash
    git clone https://github.com/Danny-Web-Dev/eventDrivenMicroservices.git
    cd eventDrivenMicroservices
-   ```
-
-2. **install & run nats server**
-
-   ```bash
-      brew install nats-server
-      nats-server -p 4222
    ```
