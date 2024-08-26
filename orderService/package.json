@@ -7,10 +7,10 @@
 		"start": "node index.js"
 	},
 	"dependencies": {
-		"express": "^4.17.1",
 		"dotenv": "^16.4.5",
-		"mysql2": "^2.3.0",
-		"sequelize": "^6.6.5",
-		"nats": "^1.4.12"
+		"express": "^4.17.1",
+		"mysql2": "^2.3.3",
+		"nats": "^1.4.12",
+		"sequelize": "^6.6.5"
 	}
 }
